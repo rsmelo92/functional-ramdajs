@@ -181,6 +181,8 @@ You can assume, for the purposes of this challenge, that all entities in a table
 
 The layout for the app's GUI can be found in the `Hiring Challenge - Web Application Engineer - App Layout.png` file.
 
+![layout](./layout.png)
+
 ## Delivery
 
 You should submit your solution to us as a compressed file containing a directory with at least the source code and a ReadMe file. Please make sure not to include unnecessary files such as compiled binaries, third party dependencies, etc;
