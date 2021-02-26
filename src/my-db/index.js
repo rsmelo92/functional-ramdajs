@@ -1,5 +1,7 @@
 import createDB from './modules/createDB';
 
-export {
+const functions = {
   createDB,
-}
+};
+
+export default functions;

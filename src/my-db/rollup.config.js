@@ -1,14 +1,14 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 const config = {
-  input: "./index.js",
+  input: './index.js',
   output: {
-  	file: "./dist/index.js",
-    format: "umd",
-    name: "myDB",
-    exports: "named",
+    file: './dist/index.js',
+    format: 'umd',
+    name: 'myDB',
+    exports: 'named',
   },
-  plugins: [nodeResolve()]
-}
+  plugins: [nodeResolve()],
+};
 
-export default config
+export default config;
