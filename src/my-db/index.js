@@ -1,6 +1,7 @@
 import createDB from './modules/createDB';
 import addTable from './modules/addTable';
 import addEntity from './modules/addEntity';
+import dump from './modules/dump';
 
 const DB = createDB();
 const withNewTable = addTable(DB, 'table-2', 'New Table');
@@ -20,6 +21,20 @@ const withAnotherEntity = addEntity(withNewEntity, 'table-2', 'entity-1', {
   name: 'Carla Brandao Soares',
 });
 
-console.log(withAnotherEntity);
+const secondTableWithNewEntity = addEntity(withAnotherEntity, 'table-1', 'entity-2', {
+  balance: '141566',
+  cpf: ['table-2', 'entity-0', 'cpf'],
+  status: 'ACCOUNT_STATUS_ACTIVE',
+});
+
+const secondTableWithAnotherNewEntity = addEntity(secondTableWithNewEntity, 'table-1', 'entity-3', {
+  balance: '-9918833',
+  cpf: ['table-2', 'entity-1', 'cpf'],
+  status: 'ACCOUNT_STATUS_BLOCKED',
+});
+
+// console.log(
+  dump(secondTableWithAnotherNewEntity)
+  // );
 
 // export { createDB };
