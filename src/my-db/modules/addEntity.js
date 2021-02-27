@@ -1,15 +1,36 @@
-import { toPairs, prepend, filter } from 'ramda';
+import {
+  prop, append, find, propEq, evolve, indexOf, update, merge, objOf,
+} from 'ramda';
 
 function addEntity(db, tableId, entityId, entityBody) {
-  const normalizedEntityBody = toPairs(entityBody);
-  const newEntity = prepend(['entityId', entityId], normalizedEntityBody);
-  console.log({tableId});
-  console.log({newEntity});
-  console.log({db});
-  const isCurrentTable = (item) => item[0][1] === tableId;
-  const currentTable = filter(isCurrentTable, db);
-  console.log(currentTable[0]);
-  return db;
+  const newEntity = merge(
+    objOf('entityId', entityId),
+    entityBody,
+  );
+
+  const tables = prop('tables', db);
+  const currentTable = find(
+    propEq('tableId', tableId),
+    tables,
+  );
+
+  const index = indexOf(currentTable, tables);
+  const transformedTable = evolve(
+    objOf(
+      'entities',
+      append(newEntity),
+    ), currentTable,
+  );
+
+  const newDB = evolve(
+    objOf(
+      'tables',
+      update(index, transformedTable),
+    ),
+    db,
+  );
+
+  return newDB;
 }
 
 export default addEntity;
