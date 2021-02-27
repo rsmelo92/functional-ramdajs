@@ -9,7 +9,6 @@
     "dev": "rollup -c --watch",
     "build": "rollup -c",
     "lint": "eslint .",
-    "help": "rollup --help",
     "test": "yarn jest"
   },
   "devDependencies": {
