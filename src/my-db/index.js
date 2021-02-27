@@ -34,7 +34,7 @@ const secondTableWithAnotherNewEntity = addEntity(secondTableWithNewEntity, 'tab
 });
 
 // console.log(
-  dump(secondTableWithAnotherNewEntity)
-  // );
+dump(secondTableWithAnotherNewEntity);
+// );
 
-// export { createDB };
+// export createDB;

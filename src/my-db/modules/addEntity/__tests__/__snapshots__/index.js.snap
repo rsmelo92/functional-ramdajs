@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addEntity should add new entities to tables properly 1`] = `
+Array [
+  Object {
+    "entities": Array [
+      Object {
+        "birthday": "15/12/1987",
+        "cpf": "234.528.218-70",
+        "email": "joao.silva@email.com",
+        "entityId": "entity-0",
+        "name": "João da Silva e Silva",
+      },
+      Object {
+        "birthday": "14/02/1992",
+        "cpf": "756.645.432-23",
+        "email": "aldebrando.antunes@email.com",
+        "entityId": "entity-1",
+        "name": "Aldebrando Antunes Saraiva",
+      },
+    ],
+    "tableId": "table-0",
+    "tableName": "Customers",
+  },
+  Object {
+    "entities": Array [],
+    "tableId": "table-1",
+    "tableName": "Account",
+  },
+]
+`;
+
+exports[`addEntity should add new entities to tables properly 2`] = `
+Array [
+  Object {
+    "entities": Array [
+      Object {
+        "birthday": "15/12/1987",
+        "cpf": "234.528.218-70",
+        "email": "joao.silva@email.com",
+        "entityId": "entity-0",
+        "name": "João da Silva e Silva",
+      },
+      Object {
+        "birthday": "14/02/1992",
+        "cpf": "756.645.432-23",
+        "email": "aldebrando.antunes@email.com",
+        "entityId": "entity-1",
+        "name": "Aldebrando Antunes Saraiva",
+      },
+    ],
+    "tableId": "table-0",
+    "tableName": "Customers",
+  },
+  Object {
+    "entities": Array [
+      Object {
+        "balance": "141566",
+        "cpf": Array [
+          "table-0",
+          "entity-1",
+          "cpf",
+        ],
+        "entityId": "entity-0",
+        "status": "ACCOUNT_STATUS_ACTIVE",
+      },
+    ],
+    "tableId": "table-1",
+    "tableName": "Account",
+  },
+]
+`;
