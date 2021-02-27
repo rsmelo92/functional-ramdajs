@@ -9,28 +9,22 @@ function addEntity(db, tableId, entityId, entityBody) {
   );
 
   const tables = prop('tables', db);
-  const currentTable = find(
-    propEq('tableId', tableId),
-    tables,
+  const currentTable = find(propEq('tableId', tableId), tables);
+
+  const tableTransformations = objOf(
+    'entities',
+    append(newEntity),
   );
+  const transformedTable = evolve(tableTransformations, currentTable);
 
   const index = indexOf(currentTable, tables);
-  const transformedTable = evolve(
-    objOf(
-      'entities',
-      append(newEntity),
-    ), currentTable,
+  const newDBTransformations = objOf(
+    'tables',
+    update(index, transformedTable),
   );
+  const transformedDB = evolve(newDBTransformations, db);
 
-  const newDB = evolve(
-    objOf(
-      'tables',
-      update(index, transformedTable),
-    ),
-    db,
-  );
-
-  return newDB;
+  return transformedDB;
 }
 
 export default addEntity;
