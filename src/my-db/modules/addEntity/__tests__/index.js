@@ -1,4 +1,4 @@
-import {addEntity} from './';
+import addEntity from '..';
 
 const mockDB = {
   database: 'mock data',
@@ -20,8 +20,8 @@ const mockDB = {
       tableId: 'table-1',
       tableName: 'Account',
       entities: [],
-    }
-  ]
+    },
+  ],
 };
 
 describe('addEntity', () => {
@@ -32,13 +32,13 @@ describe('addEntity', () => {
       email: 'aldebrando.antunes@email.com',
       name: 'Aldebrando Antunes Saraiva',
     };
-  
+
     const newDBWithEntity = addEntity(mockDB, 'table-0', 'entity-1', newEntity);
-  
+
     expect(newDBWithEntity.tables[0].entities).toHaveLength(2);
     expect(newDBWithEntity.tables[0].entities).toContainEqual({
       entityId: 'entity-1',
-      ...newEntity
+      ...newEntity,
     });
     expect(newDBWithEntity.tables).toMatchSnapshot();
 
@@ -52,7 +52,7 @@ describe('addEntity', () => {
     expect(tables[0].entities).toHaveLength(2);
     expect(tables[1].entities).toContainEqual({
       entityId: 'entity-0',
-      ...anotherEntity
+      ...anotherEntity,
     });
     expect(tables).toMatchSnapshot();
   });

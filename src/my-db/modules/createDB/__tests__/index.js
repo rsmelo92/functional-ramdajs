@@ -1,4 +1,4 @@
-import { createDB } from './';
+import createDB from '..';
 
 describe('createDB', () => {
   test('should create database properly', () => {

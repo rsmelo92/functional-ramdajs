@@ -1,4 +1,4 @@
-import { addTable } from './';
+import addTable from '..';
 
 const mockDB = {
   database: 'mock data',
@@ -15,14 +15,14 @@ const mockDB = {
           name: 'João da Silva e Silva',
         },
       ],
-    }
-  ]
+    },
+  ],
 };
 
 describe('addTable', () => {
   test('should add new table properly', () => {
     const newDBWithTable = addTable(mockDB, 'table-1', 'New Mocked Table');
-    
+
     expect(newDBWithTable.tables).toHaveLength(2);
     expect(newDBWithTable.tables).toContainEqual({
       tableId: 'table-1',
@@ -31,10 +31,10 @@ describe('addTable', () => {
     });
     expect(newDBWithTable).toMatchSnapshot();
   });
-  
+
   test('should add new table properly when no name is provided', () => {
     const newDBWithTable = addTable(mockDB, 'table-1');
-    
+
     expect(newDBWithTable.tables).toHaveLength(2);
     expect(newDBWithTable.tables).toContainEqual({
       tableId: 'table-1',

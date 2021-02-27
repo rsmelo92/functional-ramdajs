@@ -1,15 +1,15 @@
 module.exports = {
   clearMocks: true,
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
   moduleFileExtensions: [
-    "js",
+    'js',
   ],
   notify: true,
-  preset:  "rollup-jest",
+  preset: 'rollup-jest',
   resetMocks: true,
-  testEnvironment: "node",
+  testEnvironment: 'node',
   testPathIgnorePatterns: [
-    "/node_modules/"
+    '/node_modules/',
   ],
-  timers: "fake",
+  timers: 'fake',
 };
