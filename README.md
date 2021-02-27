@@ -20,3 +20,11 @@ The library should expose at least the following functions:
 - addEntity
 - dump
 - denormalize
+
+
+TODO:
+
+-[] Finish minimum
+-[] Unit tests
+-[] Yarn workspaces
+-[] More operations
