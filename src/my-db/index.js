@@ -1,6 +1,6 @@
-import createDB from './modules/createDB';
-import addTable from './modules/addTable';
-import addEntity from './modules/addEntity';
+import { createDB } from './modules/createDB';
+import { addTable } from './modules/addTable';
+import { addEntity } from './modules/addEntity';
 import dump from './modules/dump';
 
 const DB = createDB();

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createDB should create database properly 1`] = `
+Object {
+  "database": "bank data",
+  "tables": Array [
+    Object {
+      "entities": Array [
+        Object {
+          "birthday": "15/12/1987",
+          "cpf": "234.528.218-70",
+          "email": "joao.silva@email.com",
+          "entityId": "entity-0",
+          "name": "João da Silva e Silva",
+        },
+        Object {
+          "birthday": "18/01/1962",
+          "cpf": "682.245.830-22",
+          "email": "maria.goncalves@email.com",
+          "entityId": "entity-1",
+          "name": "Maria Gonçalves Oliveira",
+        },
+        Object {
+          "birthday": "20/03/1989",
+          "cpf": "207.772.923-16",
+          "email": "janaina.araujo@email.com",
+          "entityId": "entity-2",
+          "name": "Janaina Araújo dos Santos",
+        },
+      ],
+      "tableId": "table-0",
+      "tableName": "Customers",
+    },
+    Object {
+      "entities": Array [
+        Object {
+          "balance": "123123123",
+          "cpf": Array [
+            "table-0",
+            "entity-2",
+            "cpf",
+          ],
+          "entityId": "entity-0",
+          "status": "ACCOUNT_STATUS_ACTIVE",
+        },
+        Object {
+          "balance": "-2357000",
+          "cpf": Array [
+            "table-0",
+            "entity-0",
+            "cpf",
+          ],
+          "entityId": "entity-1",
+          "status": "ACCOUNT_STATUS_BLOCKED",
+        },
+      ],
+      "tableId": "table-1",
+      "tableName": "Account",
+    },
+  ],
+}
+`;

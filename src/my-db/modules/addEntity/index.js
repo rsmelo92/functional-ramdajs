@@ -23,4 +23,4 @@ function addEntity(db, tableId, entityId, entityBody) {
   return evolve(newDBTransformations, db);
 }
 
-export default addEntity;
+export { addEntity };

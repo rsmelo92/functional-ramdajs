@@ -12,4 +12,4 @@ function addTable(db, tableId, tableName = '') {
   return mergeLeft({ tables: newTables }, db);
 }
 
-export default addTable;
+export { addTable };

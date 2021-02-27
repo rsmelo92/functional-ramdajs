@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addTable should add new table properly 1`] = `
+Object {
+  "database": "mock data",
+  "tables": Array [
+    Object {
+      "entities": Array [
+        Object {
+          "birthday": "15/12/1987",
+          "cpf": "234.528.218-70",
+          "email": "joao.silva@email.com",
+          "entityId": "entity-0",
+          "name": "João da Silva e Silva",
+        },
+      ],
+      "tableId": "table-0",
+      "tableName": "Customers",
+    },
+    Object {
+      "entities": Array [],
+      "tableId": "table-1",
+      "tableName": "New Mocked Table",
+    },
+  ],
+}
+`;
+
+exports[`addTable should add new table properly when no name is provided 1`] = `
+Object {
+  "database": "mock data",
+  "tables": Array [
+    Object {
+      "entities": Array [
+        Object {
+          "birthday": "15/12/1987",
+          "cpf": "234.528.218-70",
+          "email": "joao.silva@email.com",
+          "entityId": "entity-0",
+          "name": "João da Silva e Silva",
+        },
+      ],
+      "tableId": "table-0",
+      "tableName": "Customers",
+    },
+    Object {
+      "entities": Array [],
+      "tableId": "table-1",
+      "tableName": "",
+    },
+  ],
+}
+`;
