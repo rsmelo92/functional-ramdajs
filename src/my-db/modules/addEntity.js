@@ -19,9 +19,8 @@ function addEntity(db, tableId, entityId, entityBody) {
     'tables',
     update(tableIndex, transformedTable),
   );
-  const transformedDB = evolve(newDBTransformations, db);
 
-  return transformedDB;
+  return evolve(newDBTransformations, db);
 }
 
 export default addEntity;

@@ -3,7 +3,7 @@ import addTable from './modules/addTable';
 import addEntity from './modules/addEntity';
 
 const DB = createDB();
-const withNewTable = addTable(DB, 'table-2');
+const withNewTable = addTable(DB, 'table-2', 'New Table');
 
 const newEntity = {
   birthday: '14/02/1992',
@@ -12,8 +12,6 @@ const newEntity = {
   name: 'Aldebrando Antunes Saraiva',
 };
 const withNewEntity = addEntity(withNewTable, 'table-2', 'entity-0', newEntity);
-
-console.log({ withNewEntity });
 
 const withAnotherEntity = addEntity(withNewEntity, 'table-2', 'entity-1', {
   birthday: '24/04/1994',
