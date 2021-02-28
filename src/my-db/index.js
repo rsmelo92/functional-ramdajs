@@ -8,10 +8,12 @@ const DB = createDB();
 
 denormalize(DB);
 
-export {
+const modules = {
   createDB,
   addTable,
   addEntity,
   dump,
   denormalize,
 };
+
+export default modules;
