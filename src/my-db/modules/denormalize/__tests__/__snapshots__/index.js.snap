@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`denormalize should denormalize database properly 1`] = `
+Object {
+  "database": "mock data",
+  "tables": Array [
+    Object {
+      "entities": Array [
+        Object {
+          "birthday": "15/12/1987",
+          "cpf": "234.528.218-70",
+          "email": "joao.silva@email.com",
+          "entityId": "entity-0",
+          "name": "João da Silva e Silva",
+        },
+      ],
+      "tableId": "table-0",
+      "tableName": "Customers",
+    },
+    Object {
+      "entities": Array [
+        Object {
+          "balance": "-2357000",
+          "cpf": "234.528.218-70",
+          "entityId": "entity-1",
+          "status": "ACCOUNT_STATUS_BLOCKED",
+        },
+      ],
+      "tableId": "table-1",
+      "tableName": "Account",
+    },
+  ],
+}
+`;
