@@ -4,11 +4,6 @@ import addEntity from './modules/addEntity';
 import dump from './modules/dump';
 import denormalize from './modules/denormalize';
 
-const DB = createDB();
-
-dump(DB);
-denormalize(DB);
-
 const modules = {
   createDB,
   addTable,
