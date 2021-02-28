@@ -6,6 +6,8 @@ import denormalize from './modules/denormalize';
 
 const DB = createDB();
 
+dump(DB);
+console.log("------");
 denormalize(DB);
 
 const modules = {
