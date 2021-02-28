@@ -6,7 +6,12 @@ import denormalize from './modules/denormalize';
 
 const DB = createDB();
 
-dump(DB);
 denormalize(DB);
 
-// export createDB;
+export {
+  createDB,
+  addTable,
+  addEntity,
+  dump,
+  denormalize,
+};

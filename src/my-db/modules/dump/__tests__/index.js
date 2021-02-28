@@ -27,7 +27,7 @@ describe('dump', () => {
     const dumped = dump(mockDB);
 
     expect(dir).toHaveBeenCalledWith(mockDB, { depth: null });
-    expect(typeof dumped).toBe('string');
+    expect(typeof dumped).toBe('object');
     expect(dumped).toMatchSnapshot();
   });
 });
