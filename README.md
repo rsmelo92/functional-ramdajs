@@ -24,6 +24,7 @@ The library should expose at least the following functions:
 - [ ] Front end application
 
 extras:
+- [ ] Fix imports and assure right tree shaking
 - [ ] Improve code using right ramda functions!!
 - [ ] Add flow
 - [ ] yarn workspaces
