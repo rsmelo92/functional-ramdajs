@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dump should dump data properly 1`] = `
+Object {
+  "database": "mock data",
+  "tables": Array [
+    Object {
+      "entities": Array [
+        Object {
+          "birthday": "15/12/1987",
+          "cpf": "234.528.218-70",
+          "email": "joao.silva@email.com",
+          "entityId": "entity-0",
+          "name": "João da Silva e Silva",
+        },
+      ],
+      "tableId": "table-0",
+      "tableName": "Customers",
+    },
+  ],
+}
+`;
