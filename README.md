@@ -15,8 +15,17 @@ The Library should be able to:
 
 The library should expose at least the following functions:
 
-- createDB
-- addTable
-- addEntity
-- dump
-- denormalize
+- [x] createDB
+- [x] addTable
+- [x] addEntity
+- [x] dump
+- [x] denormalize
+- [x] tests
+- [ ] Front end application
+
+extras:
+- [ ] Improve code using right ramda functions!!
+- [ ] Add flow
+- [ ] yarn workspaces
+- [ ] Add more functions
+- [ ] Throw errors if something is wrong on functions
