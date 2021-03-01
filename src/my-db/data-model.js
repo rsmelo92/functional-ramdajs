@@ -34,7 +34,7 @@ const data = {
       entities: [
         {
           entityId: 'entity-0',
-          balance: '123123123',
+          balance: '633400',
           cpf: ['table-0', 'entity-2', 'cpf'],
           status: 'ACCOUNT_STATUS_ACTIVE',
         },
