@@ -5,7 +5,7 @@ function Chip({ children }) {
   return (
     <span className="chip">
       <span className="chip-icon">
-        <img src={`${process.env.PUBLIC_URL}/link.png`} />
+        <img alt="linked-icon" src={`${process.env.PUBLIC_URL}/link.png`} />
       </span>
       {children}
     </span>
