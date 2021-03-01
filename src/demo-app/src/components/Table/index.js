@@ -1,36 +1,59 @@
 import React from 'react';
 import Card from '../Card';
+import Chip from '../Chip';
 import './index.css'
 
-function Table() {
+function Table({data}) {
+  console.log(data);
+  const { tableName, entities } = data;
+  console.log({entities});
   return (
     <Card className="Table-card">
       <table className="Table">
-        <caption className="Table-title">Customers</caption>
+        <caption className="Table-title">{tableName}</caption>
         <thead>
-          <tr>
-            <th>Entity ID</th>
-            <th>Birthdate</th>
-            <th>CPF</th>
-            <th>e-mail</th>
-            <th>Name</th>
-          </tr>
+          {tableName === 'Customers'? (
+            <tr>
+              <th>Entity ID</th>
+              <th>Birthdate</th>
+              <th>CPF</th>
+              <th>e-mail</th>
+              <th>Name</th>
+            </tr>
+          ) : 
+          (
+            <tr>
+              <th>Entity ID</th>
+              <th>Balance</th>
+              <th>CPF</th>
+              <th>Status</th>
+            </tr>
+          )
+          }
         </thead>
         <tbody>
-          <tr>
-            <td>0</td>
-            <td>14/02/1992</td>
-            <td>123.123.123.65</td>
-            <td>Janaina.Janaina@gmail.com</td>
-            <td>Janaina araujo dos santos</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>14/02/1992</td>
-            <td>123.123.123.65</td>
-            <td>ahoy@gmail.com</td>
-            <td>ahoym</td>
-          </tr>
+          {tableName === 'Customers' ? 
+            entities.map(e => (
+              <tr key={e.entityId}>
+                <td>{e.entityId.split('-')[1]}</td>
+                <td>{e.birthday}</td>
+                <td>{e.cpf}</td>
+                <td>{e.email}</td>
+                <td>{e.name}</td>
+              </tr>
+            )) : 
+            entities.map(e => (
+              <tr key={e.entityId}>
+                <td>{e.entityId.split('-')[1]}</td>
+                <td>{e.balance}</td>
+                <td>
+                  <Chip>
+                    {e.cpf}
+                  </Chip>
+                  </td>
+                <td>{e.status}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </Card>
