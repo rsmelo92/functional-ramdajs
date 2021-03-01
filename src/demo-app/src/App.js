@@ -17,8 +17,8 @@ function App() {
         <Card className="App-main-card" depth={2}>
           <h1 className="App-title">My Database</h1>
           {data.tables.map((table) =>(
-              <Table key={table.tableId} data={table} />
-            ))}
+            <Table key={table.tableId} data={table} />
+          ))}
         </Card>
       </main>
     </div>

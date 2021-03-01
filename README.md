@@ -1,17 +1,54 @@
-# Challenge repo
+# Challenge
 
-This is a challenge
+This is a challenge for `Nubank's Web Application Engineer`
 
-The Library should be able to:
+## Pre-requisites
 
-- Create databases.
-- Add new tables to a database.
-- Add new entities to tables.
-  - An entity attribute can either be a Value (string, boolean or scalar) or a Reference to another attribute.
-  - A Reference should be described with a triplet following the format: [ tableId entityId attributeId ].
-- Resolve the value of a given reference.
-- Generate a normalized representation of the state of a database.
-- Generate a denormalized representation of the state of a database.
+- NodeJS 14
+- Yarn
+
+## Getting Started
+
+Go to root directory and run 
+
+```
+yarn install
+```
+
+(This package is running with [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), so you should `run yarn install` ideally inside the workspace root)
+
+To build and set all needed to run the projects - still on the root directory - run:
+
+```
+yarn bootstrap
+```
+
+To finally run the demo-app you can run
+
+```
+yarn run:front
+```
+
+## Running lib only
+
+Navigate to `src/my-db` and run
+
+```
+yarn install
+```
+
+After installing all dependecies you can run:
+
+```
+yarn dev
+```
+
+To check lib tests just run:
+```
+yarn test
+```
+
+## TODO
 
 The library should expose at least the following functions:
 
@@ -21,7 +58,7 @@ The library should expose at least the following functions:
 - [x] dump
 - [x] denormalize
 - [x] tests
-- [ ] Front end application
+- [x] Front end application
 
 extras:
 - [ ] Fix imports and assure right tree shaking

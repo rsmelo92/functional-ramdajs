@@ -4,9 +4,7 @@ import Chip from '../Chip';
 import './index.css'
 
 function Table({data}) {
-  console.log(data);
   const { tableName, entities } = data;
-  console.log({entities});
   return (
     <Card className="Table-card">
       <table className="Table">

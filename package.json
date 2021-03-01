@@ -5,5 +5,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Anonymous",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "yarn --cwd ./src/my-db build && yarn --cwd ./src/demo-app build",
+    "run:front": "yarn --cwd ./src/demo-app serve -s build"
+  }
 }
