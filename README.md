@@ -50,7 +50,7 @@ yarn test
 
 ## TODO
 
-The library should expose at least the following functions:
+This challenge should have at least:
 
 - [x] createDB
 - [x] addTable
