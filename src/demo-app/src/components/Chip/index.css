@@ -1,0 +1,21 @@
+.chip {
+  background-color: #8a8a8a;
+  color: white;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipses;
+}
+
+.chip-icon {
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.chip-icon img {
+  width: 21px;
+}

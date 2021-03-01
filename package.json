@@ -1,8 +1,9 @@
 {
   "name": "challenge",
+  "workspaces": ["src/demo-app", "src/my-db"],
+  "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "''",
-  "author": "''",
+  "author": "Anonymous",
   "license": "MIT"
 }
