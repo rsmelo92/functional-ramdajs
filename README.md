@@ -15,15 +15,15 @@ Go to root directory and run
 yarn install
 ```
 
-(This package is running with [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), so you should `run yarn install` ideally inside the workspace root)
+(This package is running with [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), so you should run `yarn install` ideally inside the workspace root)
 
-To build and set all needed to run the projects - still on the root directory - run:
+To build and set all that is needed to run the projects, make sure you are still in the root directory, then run:
 
 ```
 yarn bootstrap
 ```
 
-To finally run the demo-app you can run
+To finally start the demo-app you can run
 
 ```
 yarn run:front
@@ -61,9 +61,9 @@ The library should expose at least the following functions:
 - [x] Front end application
 
 extras:
-- [ ] Fix imports and assure right tree shaking
-- [ ] Improve code using right ramda functions!!
+- [x] yarn workspaces
 - [ ] Add flow
-- [ ] yarn workspaces
+- [ ] Improve code using right ramda functions!!
+- [ ] Fix imports and assure right tree shaking
 - [ ] Add more functions
 - [ ] Throw errors if something is wrong on functions
