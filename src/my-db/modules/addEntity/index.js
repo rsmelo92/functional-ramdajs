@@ -1,12 +1,12 @@
 import {
-  prop, append, find, propEq, evolve, indexOf, update, merge, objOf,
+  prop, append, find, propEq, evolve, indexOf, update, mergeLeft, objOf,
 } from 'ramda';
 
 function addEntity(db, tableId, entityId, entityBody) {
   const tables = prop('tables', db);
   const currentTable = find(propEq('tableId', tableId), tables);
 
-  const newEntity = merge(
+  const newEntity = mergeLeft(
     objOf('entityId', entityId),
     entityBody,
   );

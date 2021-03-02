@@ -1,11 +1,14 @@
-import { prop, append, mergeLeft } from 'ramda';
+import {
+  prop, append, mergeLeft, objOf, mergeAll,
+} from 'ramda';
 
 function addTable(db, tableId, tableName = '') {
-  const newTable = {
-    tableId,
-    tableName,
-    entities: [],
-  };
+  const newTable = mergeAll([
+    objOf('tableId', tableId),
+    objOf('tableName', tableName),
+    objOf('entities', []),
+  ]);
+
   const tables = prop('tables', db);
   const newTables = append(newTable, tables);
 
