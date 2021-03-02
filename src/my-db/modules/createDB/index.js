@@ -1,4 +1,4 @@
-import data from '../../data-model';
+import data from '../../data';
 
 function createDB() {
   return data;
