@@ -62,7 +62,4 @@ This challenge should have at least:
 
 extras:
 - [x] yarn workspaces
-- [ ] Improve code using right ramda functions!!
-- [ ] Fix imports and assure right tree shaking
-- [ ] Add more functions
-- [ ] Throw errors if something is wrong on functions
+- [x] Improve code using right ramda functions!!
