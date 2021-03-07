@@ -1,6 +1,4 @@
-# Challenge
-
-This is a challenge for `Nubank's Web Application Engineer`
+# Studying functional programming
 
 ## Pre-requisites
 
@@ -12,10 +10,8 @@ This is a challenge for `Nubank's Web Application Engineer`
 Go to root directory and run 
 
 ```
-yarn install
+yarn
 ```
-
-(This package is running with [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), so you should run `yarn install` ideally inside the workspace root)
 
 To build and set all that is needed to run the projects, make sure you are still in the root directory, then run:
 
@@ -47,19 +43,3 @@ To check lib tests just run:
 ```
 yarn test
 ```
-
-## TODO
-
-This challenge should have at least:
-
-- [x] createDB
-- [x] addTable
-- [x] addEntity
-- [x] dump
-- [x] denormalize
-- [x] tests
-- [x] Front end application
-
-extras:
-- [x] yarn workspaces
-- [x] Improve code using right ramda functions!!

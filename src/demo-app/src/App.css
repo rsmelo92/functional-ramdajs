@@ -1,5 +1,5 @@
 :root {
-  --nucolor: #7e57c2;
+  --maincolor: #ff6961;
   --borderRadius: 4px;
 }
 
@@ -21,6 +21,6 @@
 }
 
 .App-title {
-  color: var(--nucolor);
+  color: var(--maincolor);
   margin: 14px;
 }
